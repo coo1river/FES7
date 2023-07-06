@@ -1,0 +1,46 @@
+/* font-face 상대경로로 폰트 연결 */
+@font-face {
+  font-family: "MBC";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/MBC1961GulimM.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: Pretendard-Regular, MBC, Dotum, "돋움", sans-serif;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 2em;
+}
+
+.parents {
+  width: 200px;
+  height: 200px;
+  background-color: aqua;
+}
+
+.child {
+  width: 50vw;
+  height: 50vh;
+
+  font-size: 0.5em;
+  background-color: salmon;
+}
+
+html {
+  font-size: 10px;
+}
+
+p {
+  font-size: 10px;
+}
+
+overflow: hidden;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+-webkit-line-clamp: 3;
