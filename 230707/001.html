@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>선택자 우선순위</title>
+  <style>
+    /* 더 구체적인 선택자가 우선순위를 가짐(클래스 < 아이디 < 태그) */
+    #id1 {
+      color: violet;
+    }
+
+    .c1 {
+      color: green;
+    }
+
+    p {
+      color: red;
+      background-color: aqua;
+    }
+
+    /* 동일한 속성 값 작성 시 후자가 우선순위를 가짐 */
+    p {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 인라인 스타일이 가장 높은 우선순위를 가짐 -->
+  <p class="c1" id="id1" style="color:yellow">선택자 우선순위</p>
+  <p class="c1" id="id1">선택자 우선순위</p>
+  <p>선택자 우선순위</p>
+</body>
+
+</html>

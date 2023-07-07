@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* 101점 */
+    div #id {
+      color: green;
+    }
+
+    /* 1점 */
+    p {
+      color: black;
+    }
+
+    /* 100점 */
+    #id {
+      color: blue;
+    }
+
+    /* 10점 */
+    .class {
+      color: yellow;
+    }
+
+
+    /* 아무리 구체적으로 작성한다고 해도 클래스 > 태그 우선순위를 넘을 순 없음 */
+    html body main section article div ul li p strong span a {
+      background: purple;
+      color: blue;
+
+      /* 모든 선언을 무시하고 가장 우선순위를 가짐 */
+      * {
+        color: royalblue !important
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="002.css">
+</head>
+
+<body>
+  <div>
+    <p id="id" class="class">
+      1. 이 글자는 어떤 색일까요?
+    </p>
+    <p id="id" class="class" style="color:red">
+      2. 이 글자는 어떤 색일까요??
+    </p>
+
+    <span></span>
+    <main>
+      <section>
+        <article>
+          <div>
+            <ul class="ul">
+              <li>
+                <p>
+                  <strong>
+                    <span>
+                      <a href="#" class="click">
+                        1. 이 글자는 어떤 색일까요?
+                        2. 배경색은 어떤 색일까요?
+                      </a>
+                    </span>
+                  </strong>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+
+</body>
+
+</html>
