@@ -1,106 +1,111 @@
 @font-face {
-  font-family: "Pretendard-Regular", "Pretendard-Bold", "Pretendard-Light",
-    "Pretendard-Medium";
-  src: url(fonts/Pretendard-Bold.woff) format("woff"),
-    url(fonts/Pretendard-Regular.woff) format("woff"),
-    url(fonts/Pretendard-Light.woff) format("woff");
-  font-weight: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
   font-style: normal;
 }
-
-body {
-  margin: 0;
-  font-family: "Pretendard-Regular", "Pretendard-Bold", "Pretendard-Light";
-}
-
-article {
-  width: 288px;
-  height: 374px;
-  border-radius: 8px;
-  background: #fff;
-  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
-}
-
-.head {
-  display: inline-flex;
-  align-items: center;
-  gap: 16px;
-  margin: 10px;
-}
-
-.profile {
-  width: 40px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  background: lightgray 50% / cover no-repeat;
-  fill: var(--neutral-n-80, #d8ddde);
-}
-
-.desk {
-  width: 288px;
-  height: 196px;
-  flex-shrink: 0;
-}
-
-h2 {
-  display: flex;
-  width: 200px;
-  height: 19px;
-  flex-direction: column;
-  flex-shrink: 0;
-  color: var(--text-1, #29363d);
-  font-family: Pretendard;
-  font-size: 16px;
-  font-style: normal;
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
   font-weight: 700;
-  line-height: normal;
-}
-
-.h3 {
-  display: flex;
-  width: 200px;
-  flex-direction: column;
-  flex-shrink: 0;
-  color: var(--text-2, #5a6a72);
-  font-family: Pretendard;
-  font-size: 12px;
   font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 
-.content {
-  display: flex;
-  width: 256px;
-  height: 40px;
-  flex-direction: column;
-  flex-shrink: 0;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  color: var(--text-2, #5a6a72);
-  font-family: Pretendard;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  margin: 16px;
+:root {
+  --main-font: "Pretendard-Regular";
+  --main-font-size: 12px;
+  --main-color: #5a6a72;
 }
 
-.main-content {
-  width: 288px;
-  height: 238px;
-  flex-shrink: 0;
-}
-
-.link {
-  display: flex;
-  justify-content: space-between;
-  margin: 10px;
+body,
+h3,
+p,
+img {
+  margin: 0;
 }
 
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+.card {
+  width: 288px;
+  height: 374px;
+  font-family: var(--main-font);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 3px 14px 0 14px;
+  color: var(--main-color);
+  font-size: var(--main-font-size);
+  align-items: center;
+}
+
+.profile-image {
+  width: 100%;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  padding: 16px 0 16px;
+}
+
+.profile h3 {
+  color: #29363d;
+  font-size: 16px;
+}
+
+.main-image {
+  width: 100%;
+  aspect-ratio: 288/196;
+  object-fit: cover;
+}
+
+.content {
+  color: var(--main-color);
+  font-size: var(--main-font-size);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  padding: 12px 16px 0 16px;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.read {
+  font-weight: 700;
   text-decoration: underline;
+  color: #29363d;
+  position: relative;
+  left: 22px;
+  top: 16px;
+}
+
+.read-btn {
+  position: relative;
+  bottom: 1px;
+  left: 15px;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+.card-list {
+  display: flex;
+  gap: 30px;
 }
