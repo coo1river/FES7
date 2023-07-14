@@ -1,0 +1,65 @@
+body,
+h1,
+h2,
+div {
+  margin: 0;
+}
+
+body {
+  background-image: url(../images/background.gif);
+  color: white;
+}
+
+div {
+  color: inherit;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+.wrapper {
+  width: 800px;
+  margin: 0 auto;
+  background-color: #ddd;
+}
+
+.header {
+  background-image: url(../images/cover.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+}
+
+.header h1 {
+  text-align: center;
+  font-size: 100px;
+}
+
+.header p {
+  margin: 0 auto;
+  border-top: 4px solid white;
+  color: inherit;
+  width: fit-content;
+  padding: 10px 20px;
+}
+
+.content {
+  background-color: white;
+  color: black;
+}
+
+.skill {
+  padding: 20px;
+  margin: 20px;
+}
+
+.information {
+  padding: 20px;
+  margin: 20px;
+}
+
+.main li {
+  list-style-type: none;
+}
