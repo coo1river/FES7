@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button</title>
+  <style>
+    button {
+      width: 88px;
+      height: 32px;
+      text-align: center;
+      font-family: Pretendard;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      background-color: #2D3848;
+      border: 2px solid #1A202C;
+      box-shadow: inset 1px 1px 0 0 #4A5568;
+    }
+
+    .btn1:disabled,
+    .btn2:disabled,
+    .btn3:disabled {
+      color: #4A5568;
+    }
+
+    .btn1 {
+      color: #CBD5DF;
+    }
+
+    .btn1:hover {
+      text-decoration: underline;
+      color: white;
+    }
+
+    .btn1:active {
+      text-decoration: underline;
+      color: white;
+      box-shadow: inset 1px 1px 0 0 #262F3E;
+    }
+
+
+    .btn2 {
+      color: #439AFF;
+    }
+
+    .btn2:enabled:hover {
+      background-color: #439AFF;
+      box-shadow: inset 1px 1px 0 0 #73B4FF;
+      color: white;
+      text-decoration: underline;
+      border: 2px solid #439AFF;
+    }
+
+    .btn2:active {
+      box-shadow: inset 1px 1px 0 0 #3B78BE
+    }
+
+    .btn3 {
+      color: #EB5757;
+    }
+
+    .btn3:enabled:hover {
+      background-color: #EB5757;
+      box-shadow: inset 1px 1px 0 0 #FD6F6F;
+      color: white;
+      border: 2px solid #EB5757;
+      text-decoration: underline;
+    }
+
+    .btn3:active {
+      box-shadow: inset 1px 1px 0 0 #D94242;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <button class="btn1" type="button">Button</button>
+  <button class="btn2" type="button">Yes</button>
+  <button class="btn3" type="button">Del</button>
+</body>
+
+</html>
