@@ -31,6 +31,13 @@ a {
   text-decoration: none;
 }
 
+.card-list {
+  margin: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
 .card {
   width: 288px;
   height: 374px;
@@ -103,9 +110,4 @@ a {
 
 .btn {
   margin-top: 5px;
-}
-
-.card-list {
-  display: flex;
-  gap: 30px;
 }
