@@ -1,0 +1,37 @@
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  background-image: url(./images/bg.png);
+}
+
+.bear {
+  width: 300px;
+  margin: 100px auto;
+  color: white;
+}
+
+.main {
+  width: 300px;
+  height: 306px;
+  border-radius: 0 0 30px 30px;
+  border-bottom: 10px solid #46260e;
+  background-image: url(./images/green.png);
+  background-repeat: no-repeat;
+  background-color: #9c6035;
+}
+
+.content {
+  padding: 50px 25px;
+}
+
+.content h1 {
+  font-size: 36px;
+  margin: 5px 0;
+}
+
+.content p {
+  color: #e8bc9c;
+}
