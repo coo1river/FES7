@@ -1,0 +1,571 @@
+알파카
+alpaca111
+오프라인 표시
+
+8. 한혜지 — 오늘 오후 3:04
+넹
+8. 이주연 — 오늘 오후 3:04
+네~
+8. 이해지 — 오늘 오후 3:04
+넵
+8. 정현지_1 — 오늘 오후 3:04
+넵
+8. 조예슬 — 오늘 오후 3:04
+네!
+8. 박규경 — 오늘 오후 3:04
+넵
+8. 한지훈 — 오늘 오후 3:04
+ㄴㅂ
+넵
+8. 박규경 — 오늘 오후 3:06
+네...
+8. 양혜진 — 오늘 오후 3:06
+:PepeHands:
+(강사) 강혜진 - Chilli — 오늘 오후 3:07
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <style>
+    .container {
+      width: 520px;
+      height: 520px;
+
+    }
+
+    .item-a {
+      background-color: royalblue;
+    }
+
+    .item-b {
+      background-color: gold;
+    }
+
+    .item-c {
+      background-color: slateblue;
+    }
+
+    .item-d {
+      background-color: orange;
+    }
+
+    .item-e {
+      background-color: salmon;
+    }
+
+    .item-f {
+      background-color: seagreen;
+    }
+
+    .container div {
+      flex-basis: 0;
+    }
+
+    /* 첫번째 flex */
+    .container {
+      display: flex;
+      flex-direction: column;
+      /* gap: 10px; */
+    }
+
+    .con1 {
+      flex-grow: 3;
+    }
+
+    .con2 {
+      flex-grow: 2;
+    }
+
+    /* 2번째 */
+    .con2 {
+      display: flex;
+      /* gap: 10px */
+    }
+
+    .con2 .item-e {
+      flex-grow: 2;
+    }
+
+    .con2 .item-f {
+      flex-grow: 3;
+    }
+
+    /* con1 분할 */
+    .con1 {
+      display: flex;
+    }
+
+    .con1 .con1-1 {
+      flex-grow: 3;
+    }
+
+    .con1 .item-d {
+      flex-grow: 2;
+    }
+
+    /* con1-1 */
+    .con1-1 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .con1-1 .item-a {
+      flex-grow: 2;
+    }
+
+    .con1-1 .con1-1-1 {
+      flex-grow: 1;
+    }
+
+    /* .con1-1-1 */
+    .con1-1-1 {
+      display: flex;
+    }
+
+    .con1-1-1 .item-b {
+      flex-grow: 2;
+    }
+
+    .con1-1-1 .item-c {
+      flex-grow: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="con1">
+      <div class="con1-1">
+        <div class="item-a">A</div>
+        <div class="con1-1-1">
+          <div class="item-b">B</div>
+          <div class="item-c">C</div>
+        </div>
+      </div>
+      <div class="item-d">D</div>
+    </div>
+    <div class="con2">
+      <div class="item-e">E</div>
+      <div class="item-f">F</div>
+    </div>
+  </div>
+
+</body>
+
+</html>
+8. 이주연 — 오늘 오후 3:07
+이거 하니깐 flex grow 조금 알겠어영 감사합니다
+8. 양혜진 — 오늘 오후 3:07
+flex 손절..
+8. 박준홍 — 오늘 오후 3:07
+어질어질하네요..
+8. 박규경 — 오늘 오후 3:09
+그럼 여기서 gap을 다 맞출 수 있는 방법이 비율 조절하면 되나요?
+8. 김창영 — 오늘 오후 3:12
+그럽 갭이 20이였으면 비율 조정을 따로 안했어도 되나요?
+8. 서동주 — 오늘 오후 3:12
+아하..!
+8. 김창영 — 오늘 오후 3:12
+8. 황시하 — 오늘 오후 3:13
+그리드 쓸게요..
+8. 이주연 — 오늘 오후 3:13
+ㅋㅋㅋㅋㅋ
+8. 박준홍 — 오늘 오후 3:13
+ㅋㅋㅋㅋㅋㅋㅋㅋ
+8. 한지훈 — 오늘 오후 3:13
+이럴때는 그리드를 쓰자...
+8. 황시하 — 오늘 오후 3:14
+강사님처럼 척척척 쓰는 날이 올까요?
+8. 김창영 — 오늘 오후 3:14
+근데 이럴때랑 저럴때를 구분할 수 있나요?
+저는 안되는데
+8. 양혜진 — 오늘 오후 3:14
+저도 안됩니다
+8. 이주연 — 오늘 오후 3:15
+강사님처럼 오래 공부해야..될듯해요
+8. 신명진 — 오늘 오후 3:15
+짬밥을 쌓아서...
+8. 황시하 — 오늘 오후 3:15
+🥹
+8. 박준홍 — 오늘 오후 3:16
+진짜 어지럽네요..
+8. 김창영 — 오늘 오후 3:16
+그 어떤 방식으로 하려고하시는건지라도 설명해주시면 안되나요?
+아 네
+네 감사합니다
+8. 서동주 — 오늘 오후 3:17
+너무 어렵다
+8. 김창영 — 오늘 오후 3:17
+안하겠습니다
+8. 양혜진 — 오늘 오후 3:17
+빠른포기
+8. 정희수 — 오늘 오후 3:17
+기록말소-
+8. 김모건 — 오늘 오후 3:17
+저는 grid 실습을 5x5 로 했는데 갭을 넣어 줬을 때 모양이 틀어지는데요
+flex 처럼 비율을 바꿔서 줘야할까요?
+8. 황시하 — 오늘 오후 3:17
+휴지통으로 가니까 맘이 편하네요
+8. 김모건 — 오늘 오후 3:18
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid</title>
+  <style>
+    .container {
+      width: 530px;
+      height: 530px;
+      background-color: gray;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      /* gap: 3px; */
+    }
+
+    .container div:nth-child(1) {
+      background-color: blue;
+      grid-area: 1/1/3/4;
+    }
+
+    .container div:nth-child(2) {
+      background-color: skyblue;
+      grid-area: 3/1/3/3;
+    }
+
+    .container div:nth-child(3) {
+      background-color: orange;
+      grid-area: 3/3/4/4;
+    }
+
+    .container div:nth-child(4) {
+      background-color: yellow;
+      grid-area: 1/4/4/6;
+    }
+
+    .container div:nth-child(4) {
+      background-color: yellow;
+      grid-area: 1/4/4/47;
+    }
+
+    .container div:nth-child(5) {
+      background-color: pink;
+      grid-area: 4/1/7/3;
+    }
+
+    .container div:nth-child(6) {
+      background-color: green;
+      grid-area: 4/3/-1/-1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</body>
+
+</html>
+좌표로 줬어요...
+8. 정승규 — 오늘 오후 3:19
+네!
+8. 황시하 — 오늘 오후 3:19
+네..
+8. 김창영 — 오늘 오후 3:19
+좌표요?
+8. 정현지_1 — 오늘 오후 3:19
+네,,,
+8. 황시하 — 오늘 오후 3:19
+30초만 심호흡 시간 주세요
+8. 양혜진 — 오늘 오후 3:20
+:sadgepray:
+(강사) 강혜진 - Chilli — 오늘 오후 3:20
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 실습</title>
+  <style>
+    .container {
+      width: 520px;
+      height: 520px;
+
+      display: grid;
+
+
+
+
+      gap: 10px;
+
+    }
+
+    .container div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container div:nth-child(1) {
+      background-color: royalblue;
+      grid-area: ;
+    }
+
+    .container div:nth-child(2) {
+      background-color: gold;
+      grid-area: ;
+    }
+
+    .container div:nth-child(3) {
+      background-color: slateblue;
+      grid-area: ;
+    }
+
+    .container div:nth-child(4) {
+      background-color: orange;
+      grid-area: ;
+    }
+
+    .container div:nth-child(5) {
+      background-color: salmon;
+      grid-area: ;
+    }
+
+    .container div:nth-child(6) {
+      background-color: seagreen;
+      grid-area: f;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+  </div>
+</body>
+
+</html>
+8. 김창영 — 오늘 오후 3:21
+네
+8. 황시하 — 오늘 오후 3:22
+네..
+8. 안정현 — 오늘 오후 3:22
+네~
+8. 황시하 — 오늘 오후 3:22
+어려워요..
+8. 정승규 — 오늘 오후 3:22
+다시 한번만 설명해주세요
+8. 김창영 — 오늘 오후 3:22
+:canary: 외쳐 까나리아..
+8. 황시하 — 오늘 오후 3:22
+:canary:
+8. 이승무 — 오늘 오후 3:22
+:canary:
+8. 한지훈 — 오늘 오후 3:22
+넹
+8. 정승규 — 오늘 오후 3:23
+아하
+8. 김창영 — 오늘 오후 3:23
+31
+8. 김모건 — 오늘 오후 3:23
+3/1
+8. 황시하 — 오늘 오후 3:23
+3/1
+8. 이재영 — 오늘 오후 3:23
+3 1
+8. 서동주 — 오늘 오후 3:23
+오
+8. 황시하 — 오늘 오후 3:24
+반복하니까 그래도 좀 알겠어요..
+8. 김창영 — 오늘 오후 3:24
+정말 여러가지 방법이 있네요 ㅎ.ㅎ
+8. 김모건 — 오늘 오후 3:25
+6/3
+8. 박규경 — 오늘 오후 3:25
+63
+8. 황시하 — 오늘 오후 3:25
+6/3
+8. 정현지_1 — 오늘 오후 3:25
+6/3
+8. 박규경 — 오늘 오후 3:25
+43
+8. 이재영 — 오늘 오후 3:25
+4 3
+8. 황시하 — 오늘 오후 3:25
+4/3
+8. 박규경 — 오늘 오후 3:25
+6 6
+8. 황시하 — 오늘 오후 3:25
+대박..
+8. 이주연 — 오늘 오후 3:25
+오
+8. 황시하 — 오늘 오후 3:25
+같이 하니까 완전 쉽게 느껴져요
+8. 이주연 — 오늘 오후 3:25
+네
+8. 서동주 — 오늘 오후 3:25
+네네
+8. 한지훈 — 오늘 오후 3:25
+정말 여려가지 방법이 있군요
+8. 김창영 — 오늘 오후 3:25
+네!!
+8. 박규경 — 오늘 오후 3:25
+네네
+😭
+8. 박준홍 — 오늘 오후 3:26
+그림그리고 스캔뜨기
+8. 박규경 — 오늘 오후 3:26
+넹 ㅜ
+8. 한지훈 — 오늘 오후 3:26
+그림 그려야겠네요
+8. 류경민 — 오늘 오후 3:26
+콤마만 기억나요.,
+8. 정희수 — 오늘 오후 3:26
+공책에 직접하면 선 번호를 잘 몬매겨요..
+8. 이주연 — 오늘 오후 3:26
+ㅋㅋㅋㅋㅋㅋㅋ
+8. 박규경 — 오늘 오후 3:26
+ㅋㅋㅋㅋㅋㅋㅋㅋ
+8. 김모건 — 오늘 오후 3:26
+감사합니다 !
+8. 박규경 — 오늘 오후 3:26
+ㄴㅔ
+8. 황시하 — 오늘 오후 3:26
+넵..
+8. 박소영 — 오늘 오후 3:26
+넵
+8. 이주연 — 오늘 오후 3:26
+네
+8. 황시하 — 오늘 오후 3:27
+꿈에서도 카드 만들 것 같아요..
+8. 류경민 — 오늘 오후 3:27
+레이아웃 지옥
+8. 이주연 — 오늘 오후 3:27
+더 무서운건 계속해도 계속 막힌다는것....ㅜㅜ
+(강사) 강혜진 - Chilli — 오늘 오후 3:27
+첨부 파일 형식: archive
+card2.zip
+2.28 MB
+8. 김창영 — 오늘 오후 3:28
+혹시 방금 좌표로 한거 코드 한번만 보내주실 수 있나요??
+(강사) 강혜진 - Chilli — 오늘 오후 3:28
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  확장
+  009-1.html
+  2KB
+  ﻿
+  <!DOCTYPE html>
+  <html lang="ko-KR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 실습</title>
+    <style>
+      .container {
+        width: 520px;
+        height: 520px;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px;
+      }
+
+      .container div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .container div:nth-child(1) {
+        background-color: royalblue;
+        grid-area: 1/1/3/4;
+      }
+
+      .container div:nth-child(2) {
+        background-color: gold;
+        grid-area: 1/4/4/6;
+      }
+
+      .container div:nth-child(3) {
+        background-color: slateblue;
+        grid-area: 3/1/4/3;
+      }
+
+      .container div:nth-child(4) {
+        background-color: orange;
+        grid-area: 3/3/4/4;
+      }
+
+      .container div:nth-child(5) {
+        background-color: salmon;
+        grid-area: 4/1/6/3;
+      }
+
+      .container div:nth-child(6) {
+        background-color: seagreen;
+        grid-area: 4/3/6/6;
+      }
+    </style>
+  </head>
+
+<body>
+
+  <div class="container">
+    <div>A</div>
+    <div>B</div>
+    <div>C</div>
+    <div>D</div>
+    <div>E</div>
+    <div>F</div>
+  </div>
+</body>
+
+</html>
