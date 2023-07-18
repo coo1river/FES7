@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko-KR">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
@@ -7,48 +7,53 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>grid</title>
   <style>
-    .container {
+    header,
+    section,
+    aside,
+    footer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .grid {
+      display: grid;
       width: 600px;
       height: 600px;
-      background-color: #eee;
-      display: grid;
-
-      grid-template-rows: 1fr 3fr 1fr;
+      background-color: steelblue;
+      grid-template-columns: 3fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
       gap: 10px;
-
-      grid-template-areas:
-        "header header header"
-        "section section aside"
-        "footer footer footer";
-
+      border: 10px solid steelblue;
+      color: white;
     }
 
     header {
       background-color: skyblue;
-      grid-area: header
+      grid-column: 1/3;
+
     }
 
     section {
-      background-color: navy;
-      grid-area: section;
+      background-color: midnightblue;
     }
 
     aside {
-      background-color: lime;
-      grid-area: aside;
+      background-color: yellowgreen;
+      color: black;
     }
 
     footer {
       background-color: salmon;
-      grid-area: footer;
+      grid-column: 1/3;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
+  <div class="grid">
     <header>header</header>
-    <section>section</section>
+    <section>section > article</section>
     <aside>aside</aside>
     <footer>footer</footer>
   </div>
