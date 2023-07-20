@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pretendard-Bold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --main-font: "Pretendard-Regular";
+  --main-color: #29363d;
+  --body-color: #fffaf0;
+}
+
+body,
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: top;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: var(--body-color);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ------- */
+
+header {
+  background-color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  align-items: center;
+}
+
+.max-width {
+  width: 1284px;
+  max-width: calc(100% - 60px);
+  margin: auto;
+}
+
+.join-btn {
+  background-image: url(/img/icon-join.svg);
+  background-repeat: no-repeat;
+  padding: 4px 0 4px 40px;
+  background-position: 0 -3px;
+  color: #5a6a72;
+  font-family: "Pretendard-Bold";
+}
+
+/* ------ */
+
+.login img {
+  width: 250px;
+  display: block;
+  margin: 50px auto;
+}
+
+strong {
+  text-align: center;
+}
