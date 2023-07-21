@@ -111,6 +111,7 @@ h2.login {
 }
 
 .login-form label {
+  /* 인라인 블록으로 바꾸고 정렬 맞추기 */
   display: inline-block;
   width: 392px;
   font-size: 14px;
@@ -126,6 +127,10 @@ h2.login {
   font-size: 16px;
   font-family: var(--main-font);
   margin: 10px;
+}
+
+.login-btn:hover {
+  cursor: pointer;
 }
 
 .footer {
