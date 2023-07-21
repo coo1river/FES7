@@ -69,14 +69,67 @@ header {
   font-family: "Pretendard-Bold";
 }
 
+input {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  padding: 0;
+  background-color: unset;
+}
 /* ------ */
 
 .login img {
   width: 250px;
   display: block;
-  margin: 50px auto;
+  margin: 35px auto;
 }
 
-strong {
+h2.login {
   text-align: center;
+  margin: 30px;
+}
+
+.login strong {
+  font-size: 24px;
+  background: linear-gradient(to top, #ffd0d9b2 50%, transparent 50%);
+  text-decoration: underline 3px #ff4f6e;
+}
+
+.login-form {
+  text-align: center;
+}
+.login-form input {
+  display: block;
+  margin: 20px auto;
+  width: 392px;
+  height: 48px;
+  border-bottom: 1px solid var(--main-color);
+}
+
+.login-form label {
+  display: inline-block;
+  width: 392px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.login-btn {
+  width: 392px;
+  height: 48px;
+  border-radius: 4px;
+  background-color: var(--main-color);
+  color: white;
+  font-size: 16px;
+  font-family: var(--main-font);
+  margin: 10px;
+}
+
+.footer {
+  text-align: center;
+  color: #677880;
+  font-size: 12px;
 }
