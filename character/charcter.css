@@ -1,14 +1,28 @@
+@font-face {
+  font-family: "KBO-Dia-Gothic_bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/KBO-Dia-Gothic_bold.woff")
+    format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --main-color: #e17436;
   --border-color: #b74200;
 }
 
-body {
+body,
+p {
   margin: 0;
   padding: 0;
 }
 
 /* ---------- */
+.main .text {
+  font-family: "KBO-Dia-Gothic_bold";
+  color: white;
+  font-size: 50px;
+}
 
 .main {
   height: 100vh;
@@ -217,6 +231,32 @@ body {
   left: 32px;
 }
 
+.cheeks {
+  display: flex;
+}
+
+.cheek {
+  width: 80.274px;
+  height: 160px;
+  border-radius: 30% 50% 50% 30%;
+  background-color: white;
+  z-index: 100;
+}
+
+.cheek.left {
+  position: relative;
+  top: -330px;
+  left: -170px;
+  transform: rotate(-135deg);
+}
+
+.cheek.right {
+  position: relative;
+  top: -330px;
+  left: 170px;
+  transform: rotate(-45deg);
+}
+
 .nose {
   margin: auto;
   width: 50px;
@@ -226,4 +266,25 @@ body {
 
   position: relative;
   top: 30px;
+}
+
+.mouth img {
+  position: relative;
+  width: 25%;
+  top: -25px;
+  left: 125px;
+}
+
+.mouth img:nth-child(2) {
+  opacity: 0;
+  display: inline-block;
+  position: relative;
+  width: 25%;
+  top: 26px;
+  left: 37px;
+}
+
+.mouth img:nth-child(2):hover {
+  opacity: 100%;
+  transition: opacity 1s;
 }
