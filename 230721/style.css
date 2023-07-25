@@ -22,25 +22,20 @@ body {
 
   border-radius: 0px 10px 10px 0px;
   background: #ff007a;
-
-  position: relative;
-  left: -39px;
 }
 
 .header h1 {
   display: flex;
   align-items: center;
-  width: 448px;
+  gap: 32px;
   height: 120px;
-  padding: 46px 39px;
 
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   border-bottom: 4px solid #ddd;
   background: #fff;
   box-sizing: border-box;
 
   color: #ff007a;
-  font-family: Arial;
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
@@ -78,11 +73,8 @@ body {
   box-sizing: border-box;
 
   color: #888;
-  font-family: Arial;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 .content div:nth-child(2) {
