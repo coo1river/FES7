@@ -28,9 +28,20 @@ body {
   background-color: #ddd;
 }
 
+button:hover {
+  cursor: pointer;
+}
+/* -------- */
+
+.txt-hide {
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(50%);
+}
+
 .login {
   width: 520px;
-  height: 712px;
   margin: auto;
 
   border-radius: 10px;
@@ -38,17 +49,30 @@ body {
   background: #fff;
 }
 
+header {
+  padding: 18px;
+  border-bottom: 1px solid #c4c4c4;
+}
+
 header h1 {
+  text-align: center;
   color: #000;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
 
-  text-align: center;
-  padding: 18px;
+.close-btn {
+  display: block;
+  background: url(./img/close.svg) no-repeat 0 0/16px;
+  width: 16px;
+  height: 16px;
 
-  border-bottom: 1px solid #c4c4c4;
+  float: right;
+  position: relative;
+  top: -19px;
+  left: -5px;
 }
 
 .section-login h2 {
@@ -84,7 +108,7 @@ header h1 {
 }
 
 .login-input input:focus {
-  outline: 1px solid #f4492e;
+  outline-color: #f4492e;
 }
 
 .login-input input {
@@ -93,13 +117,58 @@ header h1 {
 
 .lg-continue {
   margin: 7px 0 0 24px;
+  position: relative;
+
+  color: #767676;
+}
+
+.lg-continue input {
+  clip-path: inset(50%);
+  margin-left: -20px;
 }
 
 .lg-continue label {
-  color: #767676;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.lg-continue::before {
+  display: inline-block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background: url("/img/check-box.svg") 0 0/22px no-repeat;
+
+  position: relative;
+  top: 5px;
+}
+
+.lg-continue::after {
+  content: "";
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+  background: url("/img/check-box(2).svg") 0 0/22px no-repeat;
+
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 20;
+}
+
+.lg-continue:hover {
+  cursor: pointer;
+}
+
+.txt-hide:checked + .lg-continue::after {
+  opacity: 1;
+
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .login-btn {
@@ -108,7 +177,7 @@ header h1 {
 
   border-radius: 5px;
   background: #2f80ed;
-  margin: 24px 21px;
+  margin: 20px 21px;
 
   color: #fff;
   font-size: 18px;
@@ -123,17 +192,19 @@ header h1 {
   gap: 12px;
 }
 
-.join p:nth-child(1)::after {
+.join a:nth-child(1)::after {
   content: "|";
   margin: 10px 0 10px 10px;
+  color: #767676;
 }
 
-.join p {
+.join a {
   color: #767676;
   font-size: 14px;
   font-weight: 400;
 }
 
+.join_find > a,
 .join_find > p {
   color: #767676;
   font-family: Spoqa Han Sans Neo;
@@ -141,12 +212,62 @@ header h1 {
   font-style: normal;
   font-weight: 400;
 
-  padding: 31px 0 19px 0;
+  padding: 21px 0 10px 0;
   text-align: center;
 }
 
-.other-login::before {
-  content: "또는";
-  top: 0;
-  left: 0;
+.or::before,
+.or::after {
+  display: inline-block;
+  content: "";
+  background-color: #c4c4c4;
+  width: 210px;
+  height: 0.5px;
+
+  position: relative;
+  top: -4px;
+}
+
+.or::before {
+  left: -10px;
+}
+
+.or::after {
+  left: 10px;
+}
+
+.other-login {
+  margin-bottom: 20px;
+}
+
+.other-login a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+
+  width: 472px;
+  height: 50px;
+
+  border-radius: 5px;
+  background: #fff;
+  color: #767676;
+}
+
+.bg-icon_google {
+  border-radius: 5px;
+  border: 1px solid #767676;
+  background: #fff;
+}
+
+.bg-icon_facebook {
+  border: 1px solid #2d9cdb;
+}
+
+.bg-icon_naver {
+  border: 1px solid #00bf18;
+}
+
+.bg-icon_kakao {
+  border: 1px solid #f2c94c;
 }
