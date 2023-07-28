@@ -258,16 +258,20 @@ header h1 {
   border-radius: 5px;
   border: 1px solid #767676;
   background: #fff;
+  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_facebook {
   border: 1px solid #2d9cdb;
+  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_naver {
   border: 1px solid #00bf18;
+  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_kakao {
   border: 1px solid #f2c94c;
+  background: url(./img/css_sprites.png) no-repeat;
 }
