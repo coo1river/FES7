@@ -269,19 +269,19 @@ header h1 {
 }
 
 .bg-icon_google::before {
-  background-position: -58px -13px;
+  background-position: -58px -12px;
 }
 
 .bg-icon_facebook::before {
-  background-position: -10px -13px;
+  background-position: -10px -12px;
 }
 
 .bg-icon_naver::before {
-  background-position: -58px -61px;
+  background-position: -58px -60px;
 }
 
 .bg-icon_kakao::before {
-  background-position: -10px -61px;
+  background-position: -10px -60px;
 }
 
 .bg-icon_google {
