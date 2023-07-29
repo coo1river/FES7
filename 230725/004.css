@@ -240,38 +240,62 @@ header h1 {
   margin-bottom: 20px;
 }
 
-.other-login a {
+.other-login {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin: 10px auto;
+  gap: 10px;
 
-  width: 472px;
-  height: 50px;
-
-  border-radius: 5px;
   background: #fff;
   color: #767676;
 }
 
-.bg-icon_google {
+.other-login a {
+  width: 472px;
+  padding: 15px;
   border-radius: 5px;
+
+  text-align: center;
+}
+
+[class^="bg-icon"]::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 28px;
+  height: 28px;
+  background-image: url(./img/css_sprites.png);
+  background-size: 96px 96px;
+}
+
+.bg-icon_google::before {
+  background-position: -58px -13px;
+}
+
+.bg-icon_facebook::before {
+  background-position: -10px -13px;
+}
+
+.bg-icon_naver::before {
+  background-position: -58px -61px;
+}
+
+.bg-icon_kakao::before {
+  background-position: -10px -61px;
+}
+
+.bg-icon_google {
   border: 1px solid #767676;
-  background: #fff;
-  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_facebook {
   border: 1px solid #2d9cdb;
-  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_naver {
   border: 1px solid #00bf18;
-  background: url(./img/css_sprites.png) no-repeat;
 }
 
 .bg-icon_kakao {
   border: 1px solid #f2c94c;
-  background: url(./img/css_sprites.png) no-repeat;
 }
