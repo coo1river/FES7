@@ -252,8 +252,10 @@ header h1 {
 
 .other-login a {
   width: 472px;
-  padding: 15px;
+  padding: 15px 0;
   border-radius: 5px;
+  margin: 0 24px 0 24px;
+  position: relative;
 
   text-align: center;
 }
@@ -266,6 +268,7 @@ header h1 {
   height: 28px;
   background-image: url(./img/css_sprites.png);
   background-size: 96px 96px;
+  left: 10px;
 }
 
 .bg-icon_google::before {
