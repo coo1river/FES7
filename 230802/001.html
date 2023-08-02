@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>String 메소드</title>
+</head>
+
+<body>
+  <script>
+    let s = 'paullab CEO 이호준';
+    let ss = 'CTO 김창영';
+    let sss = 'paullab CEO 이호준 CTO 김창영';
+
+    // replace
+    console.log(s.replace('CEO', 'CFO'));
+    console.log(s.replace(/CEO/g, 'CFO'));
+    console.log(s.replace(/C[ET]O/g, '잡부'));
+
+    // replace 매우 고급 문법 보강 설명 //
+    const string = `hojun, lee
+    gildong, hong
+    hojung, choi
+    junho, lee`
+
+
+    let result1 = string.replace(/(\w+), (\w+)/gm, "$1 $2");
+    console.log(result1)
+
+    let result2 = string.replace(/(\w+), (\w+)/gm, "$2 $1");
+    console.log(result2)
+
+    let result3 = string.replace(/(\w+), (\w+)/gm, "제 이름은 $2 제 성은 $1 입니다.");
+    console.log(result3)
+                // concat
+
+
+  </script>
+
+</body>
+
+</html>
