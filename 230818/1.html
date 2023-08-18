@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    ul {
+      padding: 0;
+    }
+
+    div {
+      margin: auto;
+      width: 500px;
+      height: 500px;
+      background-color: green;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around
+    }
+
+    .red {
+      background-color: red;
+    }
+
+    .yellow {
+      background-color: yellow;
+    }
+
+    .green {
+      background-color: green;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="box"></div>
+    <ul>
+      <li><button id="red">빨강</button></li>
+      <li><button id="yellow">노랑</button></li>
+      <li><button id="green">초록</button></li>
+  </div>
+
+
+  <script>
+    const box = document.querySelector('.box')
+    const red = document.getElementById('red');
+    const yellow = document.getElementById('yellow');
+    const green = document.getElementById('green');
+
+    red.addEventListener("click", function () {
+      box.classList.add("red");
+      box.classList.remove("yellow", "green");
+    })
+
+    yellow.addEventListener("click", function () {
+      box.classList.add("yellow");
+      box.classList.remove("red", "green");
+    })
+
+    green.addEventListener("click", function () {
+      box.classList.add("green");
+      box.classList.remove("red", "yellow");
+    })
+  </script>
+</body>
+
+</html>
