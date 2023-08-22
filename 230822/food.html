@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <input type="text">
+  <button type="button">추가</button>
+  <button type="button">메뉴 뽑기</button>
+
+  <script>
+    // 음식 이름의 배열을 전달하면 배열안에서 랜덤하게 메뉴를 뽑아내는 로봇객체의 생성자를 만들어보세요.
+
+
+    function RobotFactory(foodNames) {
+      this.name = foodNames;
+      this.sayMenu = function () {
+        const randomNum = parseInt(Math.random() * foodNames.length);
+        console.log(foodNames[randomNum]);
+      }
+    };
+
+    let foodName = [];
+    const input = document.querySelector('input');
+    const addBtn = document.querySelector('button');
+    addBtn.addEventListener('click', () => {
+      foodName.push(input.value);
+      console.log(foodName);
+    });
+
+    const robot = new RobotFactory(['청국장', '물냉면', '돔배고기']);
+    const robot1 = new RobotFactory(['청국장', '물냉면', '돔배고기']);
+    const robot2 = new RobotFactory(['청국장', '물냉면', '돔배고기']);
+    const robot3 = new RobotFactory(['청국장', '물냉면', '돔배고기']);
+    const robot4 = new RobotFactory(['청국장', '물냉면', '돔배고기']);
+
+    const randomBtn = document.querySelector('button');
+    randomBtn.addEventListener('click', () => {
+      robot
+    });
+
+
+  </script>
+</body>
+
+</html>
