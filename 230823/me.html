@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    const me = {
+      name: '시하',
+      address: '경기 고양',
+      phoneNum: '010-0000-0000',
+      game: function () {
+        console.log('시하는 게임 중');
+      },
+      sleep: function (time) {
+        time.toSleep();
+      }
+    }
+
+    const sleepTime = {
+      level: 1,
+      toSleep: function () {
+        this.sleepTime++;
+      }
+    }
+
+    function Me() {
+      this.name = '시하';
+      this.address = '경기 고양';
+      this.phoneNum = '010-0000-0000';
+    }
+
+    Me.prototype.game = function () {
+      console.log('시하는 게임 중');
+    }
+
+    Me.prototype.teaching = function (time) {
+      time.toSleep();
+    }
+
+    function sleepTime() {
+      this.time = 1;
+    }
+
+    function toSleep() {
+      this.sleepTime++;
+    }
+  </script>
+</body>
+
+</html>
