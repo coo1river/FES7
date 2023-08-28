@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Neonderthaw&family=Oswald:wght@400;500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(
+    45deg,
+    rgba(254, 232, 108),
+    rgba(119, 189, 247, 0.589)
+  );
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: normal;
+  font-family: "Neonderthaw", cusrsive;
+  color: white;
+}
