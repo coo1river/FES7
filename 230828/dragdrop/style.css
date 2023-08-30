@@ -65,6 +65,7 @@ section {
   align-items: center;
   justify-content: space-between;
 }
+
 .drag-item p {
   display: flex;
   align-items: center;

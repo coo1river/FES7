@@ -19,12 +19,14 @@ function handleDragOver(e) {
   );
 
   const nextItem = notDraggingItem.find((item) => {
-    console.log("clientY:", e.clientY);
-    console.log("offsetTop:", item.offsetTop);
-    console.log("offsetHeight:", item.offsetHeight);
+    /*
+    clientY : 뷰포트 내 마우스 y좌표
+    offsetTop: 뷰포트 내에서 요소까지의 y좌표
+    offsetHeight: 요소의 높이(border 포함)
+    */
+    return e.clientY <= item.offsetTop + item.offsetHeight / 2;
   });
-  console.log(notDraggingItem);
+  dropTarget.insertBefore(draggingItem, nextItem);
 }
-
 dropTarget.addEventListener("dragover", handleDragOver);
 // dropTarget.addEventListener("dragenter");
