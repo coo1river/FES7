@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "EliceDigitalBaeum_Bold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_220508@1.0/EliceDigitalBaeum_Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.newClass {
+  width: 100%;
+  height: 20px;
+  background-color: black;
+}
+
+.timeTable {
+  margin: 100px auto;
+  font-family: "EliceDigitalBaeum_Bold";
+  background-color: royalblue;
+  color: white;
+  box-shadow: 3px 3px 14px rgb(0 0 0 / 34%);
+  padding: 20px 100px;
+  width: fit-content;
+  border: 2px solid royalblue;
+  border-radius: 20px;
+}
