@@ -8,12 +8,12 @@ export default function Aside() {
       <button
         onClick={(e) => {
           const copy = [...Numbers];
-          copy.push(2);
+          copy.push(Numbers.length + 1);
           setNumbers(copy);
         }}
       ></button>
-      {Number.map((x, i) => (
-        <p>{x[i]}</p>
+      {Numbers.map((x) => (
+        <p>{x}</p>
       ))}
     </div>
   );
