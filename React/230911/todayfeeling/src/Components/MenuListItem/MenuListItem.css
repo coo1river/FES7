@@ -1,0 +1,15 @@
+li {
+  width: fit-content;
+  margin: auto;
+}
+
+.btn-item {
+  height: 50px;
+  width: 300px;
+  margin: 10px;
+  border: none;
+}
+
+.btn-item:hover {
+  background-color: yellowgreen;
+}
