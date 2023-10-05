@@ -6,5 +6,5 @@ const rootReducer = combineReducers({
   goodsReducer,
   stockReducer,
 });
-
+// 가나다라마바사
 export default rootReducer;
