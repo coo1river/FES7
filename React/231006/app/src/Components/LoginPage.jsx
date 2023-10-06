@@ -9,7 +9,7 @@ export default function LoginPage() {
   // 이메일, 패스워드를 명세 형식으로 작성한다.
   // 주소로 명세에 맞게 작성한 데이터를 보낸다.
 
-  const login = async () => {
+  const login = async (email, password) => {
     const baseUrl = "https://api.mandarin.weniv.co.kr";
     const reqPath = "/user/login";
     const reqUrl = baseUrl + reqPath;
@@ -21,13 +21,20 @@ export default function LoginPage() {
       },
     };
 
-    fetch(reqUrl, {
+    // 로그인 해서 token 꺼내기
+    const res = await fetch(reqUrl, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
       },
       body: JSON.stringify(loginData),
     });
+    const json = await res.json();
+    console.log(json);
+    const token = json.user.token;
+    console.log(token);
+    // 로컬스토리지에 토큰 저장하기
+    localStorage.setItem("token", token);
   };
 
   const inputEmail = (e) => {
@@ -39,7 +46,7 @@ export default function LoginPage() {
 
   const submitLogin = (e) => {
     e.preventDefault();
-    login();
+    login(email, password);
   };
 
   return (
