@@ -22,19 +22,28 @@ export default function LoginPage() {
     };
 
     // 로그인 해서 token 꺼내기
-    const res = await fetch(reqUrl, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(loginData),
-    });
-    const json = await res.json();
-    console.log(json);
-    const token = json.user.token;
-    console.log(token);
-    // 로컬스토리지에 토큰 저장하기
-    localStorage.setItem("token", token);
+    try {
+      const res = await fetch(reqUrl, {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(loginData),
+      });
+      // 서버에게 데이터 요청을 하고, 서버에서 데이터를 확인하고 있는지 없는지 올바른지 아닌지 확인할 때까지 기다린다.
+      const json = await res.json();
+      console.log(json);
+      if (!json.user) {
+        return;
+      }
+
+      const token = json.user.token;
+      console.log(token);
+      // 로컬스토리지에 토큰 저장하기
+      localStorage.setItem("token", token);
+    } catch (error) {
+      alert("로그인에 실패했습니다!");
+    }
   };
 
   const inputEmail = (e) => {
