@@ -8,6 +8,7 @@ const JoinPage = () => {
   const [imgSrc, setImgSrc] = useState(
     "https://api.mandarin.weniv.co.kr/Ellipse.png"
   );
+  const [info, setInfo] = useState("");
 
   // 회원가입 함수 만들기
   const join = async (joinData) => {
@@ -39,8 +40,13 @@ const JoinPage = () => {
     setAccountname(e.target.value);
   };
 
+  const inputInfo = (e) => {
+    setInfo(e.target.value);
+  };
+
   const uploadImage = async (imageFile) => {
-    const reqUrl = "https://api.mandarin.weniv.co.kr/image/uploadfile";
+    const baseUrl = "https://api.mandarin.weniv.co.kr/";
+    const reqUrl = baseUrl + "image/uploadfile";
     // 폼 데이터 만들기
     const form = new FormData();
     // 폼 데이터에 값 추가하기
@@ -49,7 +55,12 @@ const JoinPage = () => {
     // 폼 바디에 넣어서 요청하기
     const res = await fetch(reqUrl, {
       method: "POST",
+      body: form,
     });
+    const json = await res.json();
+    console.log(baseUrl + json.filename);
+    const imageUrl = baseUrl + json.file.name;
+    setImgSrc(imageUrl);
   };
 
   const handleChangeImage = (e) => {
@@ -66,6 +77,8 @@ const JoinPage = () => {
         email: email,
         password: password,
         accountname: accountname,
+        intro: info,
+        image: imgSrc,
       },
     };
     join(joinData);
@@ -106,7 +119,13 @@ const JoinPage = () => {
         <label htmlFor="profileImg">
           <img src={imgSrc} alt="" id="imagePre" />
         </label>
-        <input type="file" id="profileImg" name="image" accept="image/*" />
+        <input
+          type="file"
+          onChange={handleChangeImage}
+          id="profileImg"
+          name="image"
+          accept="image/*"
+        />
         <div>
           <label htmlFor="userNameInput">사용자 이름</label>
           <input
@@ -132,6 +151,7 @@ const JoinPage = () => {
         <div>
           <label htmlFor="userIntroInput">소개</label>
           <input
+            onChange={inputInfo}
             type="text"
             id="userIntroInput"
             name="intro"
